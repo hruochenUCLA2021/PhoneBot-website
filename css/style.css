@@ -1,0 +1,66 @@
+:root {
+  --text: #1a1a1a;
+  --muted: #4a4a4a;
+  --bg: #f7f6f3;
+  --card: #ffffff;
+  --rule: #d6d3cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", "Times New Roman", Times, serif;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+h1 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.45rem, 2.4vw, 2.05rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.hero {
+  margin: 0;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero figcaption {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.75rem 0.85rem 2.5rem;
+  }
+
+  .hero {
+    padding: 0.65rem 0.65rem 0.75rem;
+  }
+}
