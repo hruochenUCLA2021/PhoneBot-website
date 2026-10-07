@@ -26,12 +26,22 @@ body {
 }
 
 h1 {
-  margin: 0 0 2rem;
+  margin: 0;
   font-size: clamp(1.45rem, 2.4vw, 2.05rem);
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.01em;
   text-align: center;
+}
+
+.paper-link {
+  margin: 0.85rem 0 2rem;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.paper-link a {
+  color: var(--text);
 }
 
 .hero {
