@@ -4,20 +4,200 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PhoneBot: A Low-Cost Open Humanoid Robot Platform Reusing Smartphones</title>
-  <meta name="description" content="PhoneBot is a low-cost open humanoid robot platform that reuses commodity smartphones as the primary sensing and computing unit.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Anonymous supplementary material for PhoneBot, a low-cost humanoid robot platform that reuses smartphones for sensing and computing.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <link rel="stylesheet" href="css/style.css?v=license-dialog-1">
 </head>
 <body>
-  <main class="page">
-    <h1>PhoneBot: A Low-Cost Open Humanoid Robot Platform Reusing Smartphones</h1>
-    <figure class="hero">
-      <img
-        src="assets/hardware.png"
-        alt="PhoneBot hardware: front and side views with joint labels J1–J13 and center of mass."
-        width="1560"
-        height="1400">
-      <figcaption>Joint configuration of PhoneBot. (a) Front view. (b) Left view. Placeholder figure from the hardware design.</figcaption>
-    </figure>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Page navigation">
+      <a class="wordmark" href="#top" aria-label="PhoneBot, back to top">Phone<span>Bot</span><span class="brand-dot" aria-hidden="true"></span></a>
+      <span class="review-tag">Anonymous submission</span>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="intro page-width" id="top" aria-labelledby="paper-title">
+      <h1 id="paper-title">PhoneBot: A Low-Cost Open Humanoid Robot Platform Reusing Smartphones</h1>
+      <p class="author-line">Anonymous authors</p>
+      <p class="hero-summary">A familiar device. A new robotic platform.<br>Reusing smartphones for humanoid sensing and computing.</p>
+      <div class="publication-links" aria-label="Project resources">
+        <button class="publication-button" type="button" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></svg><span>Paper</span></button>
+        <button class="publication-button" type="button" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg><span>Video</span></button>
+        <button class="publication-button" type="button" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg><span>Code</span></button>
+      </div>
+      <div class="hero-actions" aria-label="Explore the supplementary material">
+        <a class="button button-primary" href="#hardware">Explore the hardware <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="#results">View the results <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="hardware-section" id="hardware" aria-labelledby="hardware-title">
+      <div class="page-width">
+        <div class="section-heading hardware-heading">
+          <h2 id="hardware-title">Hardware Design</h2>
+        </div>
+        <h3 class="hardware-subtitle" id="mechanical-title">Mechanical Design</h3>
+        <!-- HARDWARE DESCRIPTION START: Replace the text inside <p> below with your description. -->
+        <div class="hardware-description">
+          <p>PhoneBot is a low-cost, open humanoid robot platform that combines a modular body with a commodity smartphone as its primary sensing and computing unit. 
+             The platform stands 48.3 cm tall, weighs 1.8 kg including the smartphone, and costs approximately $400 excluding the phone. 
+             It contains 13 actuated joints, including six per leg and one torso yaw joint, all driven by DYNAMIXEL XL430-W250-T servomotors.</p>
+          
+          <p>The smartphone provides the camera, IMU, wireless connectivity, and onboard processing for perception and locomotion policy inference. 
+             A compact single-board computer handles actuator communication and executes joint-position commands. 
+             Commands and feedback pass over Wi-Fi, allowing the phone to operate without an electrical connection to the robot hardware and simplifying compatibility with different smartphone models.</p>
+          <!-- Add more paragraphs here using <p>Your next paragraph.</p> -->
+        </div>
+        <!-- HARDWARE DESCRIPTION END -->
+        <dl class="hardware-specs" aria-label="Hardware specifications">
+          <div><dt>Height</dt><dd>48.3 <span>cm</span></dd></div>
+          <div><dt>Total mass*</dt><dd>1.8 <span>kg</span></dd></div>
+          <div><dt>Actuated joints</dt><dd>13 <span>DoF</span></dd></div>
+          <div><dt>Hardware cost*</dt><dd>~$400</dd></div>
+        </dl>
+        <p class="specs-note">* Mass includes the smartphone. Hardware cost excludes the smartphone.</p>
+        <!-- HARDWARE FIGURE: Set hardwareFigure in js/hardware-resources.js to replace this image. -->
+        <!-- TWO SEPARATE FIGURES: joint configuration on the left; Hero1 above Hero2 on the right. -->
+        <div class="hardware-comparison">
+          <figure class="hardware-figure hardware-joint-figure" aria-label="Joint configuration">
+            <div class="figure-topline"><span>Joint configuration</span></div>
+            <div class="hardware-joint-image">
+              <img id="hardware-figure-image" src="assets/hardware.png" alt="PhoneBot hardware diagram showing front view (a) and left side view (b), joint labels J1 through J13, rotation axes, and the center of mass." width="1560" height="1400" decoding="async">
+            </div>
+          </figure>
+          <figure class="hardware-figure hardware-photos-figure" aria-label="Physical hardware views">
+            <div class="figure-topline"><span>Physical hardware</span></div>
+            <div class="hardware-photo-stack">
+              <img class="hardware-photo" src="assets/Hero1.png" alt="PhoneBot physical hardware in a side view." width="331" height="348" loading="lazy" decoding="async">
+              <img class="hardware-photo" src="assets/Hero2.png" alt="PhoneBot physical hardware in an angled view." width="314" height="352" loading="lazy" decoding="async">
+            </div>
+          </figure>
+        </div>
+        <section class="cad-preview" aria-label="Interactive CAD model">
+          <div class="cad-viewer-panel">
+            <div class="cad-viewer-stage">
+              <!-- 3D MODEL FILE: assets/models/PhoneBot-preview.glb; settings: js/cad-viewer.js. -->
+              <model-viewer id="phonebot-model" alt="Interactive 3D CAD model of PhoneBot" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="1" shadow-softness="0.8" exposure="0.7" tone-mapping="neutral" interaction-prompt="none" loading="eager" auto-rotate auto-rotate-delay="0" rotation-per-second="12deg"></model-viewer>
+              <div class="cad-viewer-placeholder" id="cad-viewer-placeholder">
+                <p id="cad-viewer-status" role="status" aria-live="polite">Loading the 3D model…</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="integration-section" aria-labelledby="integration-title">
+          <h3 class="hardware-subtitle" id="integration-title">System Integration</h3>
+          <!-- SYSTEM INTEGRATION DESCRIPTION: Edit this paragraph to explain the system diagram. -->
+          <p class="integration-description"> The phone’s camera and IMU provide visual and inertial measurements, while the robot application supports visual tracking, SLAM, locomotion policy inference, and user interaction, with access to cloud-based services when needed. The smartphone exchanges commands and feedback with the onboard single-board computer over Wi-Fi, without a physical electrical connection to the robot. The onboard computer receives target joint positions from the phone and communicates with the 13 DYNAMIXEL actuators through a USB-connected U2D2 interface and TTL bus. Joint-state feedback, including positions, velocities, and torques, together with wireless gamepad inputs, is relayed back to the phone. A 3S battery supplies the actuator system, while a DC converter provides 5V power to the onboard computer. This arrangement separates smartphone-based sensing and high-level processing from actuator communication and power distribution.</p>
+          <figure class="integration-figure">
+            <div class="figure-topline"><span>System diagram</span></div>
+            <!-- SYSTEM FIGURE: Set systemFigure in js/hardware-resources.js to use your own diagram. -->
+            <img id="system-figure-image" class="system-figure-image" alt="PhoneBot system integration diagram showing the smartphone camera, IMU and application, Wi-Fi communication, mini SBC, DYNAMIXEL U2D2, 13 actuators, battery, and wireless gamepad." hidden>
+            <div class="system-flow" id="system-flow" role="img" aria-label="Smartphone sends commands and receives feedback over Wi-Fi from an onboard single-board computer, which communicates with 13 actuators through a USB-to-TTL interface.">
+              <div class="system-node phone-node"><span class="node-number">01</span><h4>Smartphone</h4><p>Camera &amp; IMU<br>Perception &amp; policy inference<br>User interface</p></div>
+              <div class="system-connection"><span>Wi-Fi</span><b aria-hidden="true">↔</b><small>Commands &amp; feedback</small></div>
+              <div class="system-node"><span class="node-number">02</span><h4>Onboard computer</h4><p>Command execution<br>Actuator communication</p></div>
+              <div class="system-connection"><span>USB–TTL</span><b aria-hidden="true">↔</b><small>Joint commands &amp; telemetry</small></div>
+              <div class="system-node"><span class="node-number">03</span><h4>13 actuators</h4><p>DYNAMIXEL XL430-W250-T<br>Leg &amp; torso joints</p></div>
+            </div>
+          </figure>
+        </section>
+
+        <section class="hardware-resources" aria-labelledby="resources-title">
+          <h3 class="hardware-subtitle" id="resources-title">Build Resources</h3>
+          <p class="resources-note">The original PhoneBot CAD files, mechanical exports, bill of materials, and assembly documentation are released under the <strong>Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0)</strong>. You may copy, share, and adapt these materials for noncommercial purposes, provided you give appropriate credit, include a link to the license, retain applicable notices, and indicate any changes. Commercial use requires separate permission from the rights holders. Third-party materials remain subject to their respective licenses. All files are provided “as is,” without warranty.</p>
+          <!-- RESOURCE LINKS: Edit the paths in js/hardware-resources.js. Blank paths keep buttons unavailable. -->
+          <div class="resource-grid">
+            <article class="resource-card" id="bom" aria-labelledby="bom-title">
+              <span class="resource-type">01 / Parts &amp; cost</span>
+              <h4 id="bom-title">Bill of Materials</h4>
+              <p>The component list for the hardware, with quantities and costs.</p>
+              <div class="resource-actions"><a class="button button-primary resource-link" data-resource="bom" data-label="Download BOM" aria-disabled="true" role="link">Download BOM</a></div>
+            </article>
+            <article class="resource-card" aria-labelledby="cad-title">
+              <span class="resource-type">02 / Mechanical design</span>
+              <h4 id="cad-title">Onshape CAD Files</h4>
+              <p>Explore the robot geometry with an assembly download or an interactive CAD view.</p>
+              <div class="resource-actions">
+                <a class="button button-primary resource-link" data-resource="cad" data-label="Download CAD" aria-disabled="true" role="link">Download CAD</a>
+                <a class="resource-secondary resource-link" data-resource="onshape" data-label="View in Onshape ↗" aria-disabled="true" role="link" hidden>View in Onshape ↗</a>
+              </div>
+            </article>
+            <article class="resource-card" aria-labelledby="step-title">
+              <span class="resource-type">03 / CAD exchange</span>
+              <h4 id="step-title">STEP Files</h4>
+              <p>Download a ZIP containing the complete PhoneBot assembly in STEP format.</p>
+              <div class="resource-actions"><a class="button button-primary resource-link" data-resource="stepFiles" data-label="Download STEP Files" href="assets/PhoneBot_Assembly_STEP.zip" download="PhoneBot_Assembly_STEP.zip">Download STEP Files</a></div>
+            </article>
+            <article class="resource-card" aria-labelledby="print-title">
+              <span class="resource-type">04 / Fabrication</span>
+              <h4 id="print-title">Printable Parts</h4>
+              <p>Download a package of printable components for fabricating the robot structure.</p>
+              <div class="resource-actions"><a class="button button-primary resource-link" data-resource="printableParts" data-label="Download Parts" aria-disabled="true" role="link">Download Parts</a></div>
+            </article>
+            <article class="resource-card" aria-labelledby="assembly-tutorial-title">
+              <span class="resource-type">05 / Assembly guide</span>
+              <h4 id="assembly-tutorial-title">Assembly Tutorial</h4>
+              <p>Step-by-step videos or instructions for assembling the robot.</p>
+              <div class="resource-actions"><a class="button button-primary resource-link" data-resource="assemblyTutorial" data-label="Download Tutorial" aria-disabled="true" role="link">Download Tutorial</a></div>
+            </article>
+          </div>
+          <noscript><p class="resources-note">Enable JavaScript to use configured resource downloads.</p></noscript>
+        </section>
+      </div>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-title">
+      <div class="page-width">
+        <div class="results-heading">
+          <h2 id="results-title">Results</h2>
+        </div>
+
+        <section class="results-group simulation-results" aria-labelledby="simulation-title">
+          <div class="results-group-heading">
+            <h3 class="hardware-subtitle" id="simulation-title">Simulation results</h3>
+            <!-- SIMULATION DESCRIPTION: Replace this paragraph with your simulation setup and observations. -->
+          </div>
+          <!-- VIDEO FILES AND INDIVIDUAL CAPTIONS: Edit simulation entries in js/results-videos.js. -->
+          <div class="results-video-grid" id="simulation-videos"></div>
+        </section>
+
+        <section class="results-group physical-results" aria-labelledby="physical-results-title">
+          <div class="results-group-heading">
+            <h3 class="hardware-subtitle" id="physical-results-title">Hardware results</h3>
+            <!-- HARDWARE RESULTS DESCRIPTION: Replace this paragraph with your physical experiment setup and observations. -->
+          </div>
+          <!-- VIDEO FILES AND INDIVIDUAL CAPTIONS: Edit hardware entries in js/results-videos.js. -->
+          <div class="results-video-grid" id="hardware-videos"></div>
+        </section>
+        <noscript><p class="resources-note">Enable JavaScript to display the video gallery.</p></noscript>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer page-width"><span>PhoneBot</span><p>Supplementary material · Anonymous submission</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <dialog class="license-dialog" id="download-license-dialog" aria-labelledby="download-license-title" aria-describedby="download-license-text">
+    <form id="download-license-form">
+      <p class="license-eyebrow">Resource Download</p>
+      <h2 id="download-license-title">CC BY-NC 4.0 License</h2>
+      <p class="license-description" id="download-license-text"></p>
+      <p class="license-resource" id="download-license-resource"></p>
+      <label class="license-agreement" for="download-license-agree">
+        <input type="checkbox" id="download-license-agree" required autofocus>
+        <span>I have read and agree to the CC BY-NC 4.0 license terms.</span>
+      </label>
+      <div class="license-actions">
+        <button type="button" class="license-cancel" id="download-license-cancel">Cancel</button>
+        <button type="submit" class="license-download" id="download-license-continue" disabled>Download</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="js/hardware-resources.js?v=license-dialog-1" defer></script>
+  <script src="js/results-videos.js?v=descriptions-1" defer></script>
+  <script src="assets/vendor/model-viewer.bundle.js" defer></script>
+  <script src="js/cad-viewer.js?v=battery-yellow-1" defer></script>
 </body>
 </html>
