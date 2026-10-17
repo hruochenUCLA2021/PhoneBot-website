@@ -149,7 +149,7 @@ figcaption { max-width: 820px; margin: 0 auto; padding-top: 20px; border-top: 1p
 .resource-actions { display: flex; align-items: flex-start; flex-direction: column; gap: 14px; margin-top: auto; }
 .resource-link { max-width: 100%; overflow-wrap: anywhere; }
 .resource-secondary { font-size: 12px; color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
-.resource-link[aria-disabled="true"] { color: var(--white); background: var(--accent); border-color: var(--accent); cursor: default; text-decoration: none; }
+.resource-link[aria-disabled="true"] { color: var(--ink); background: var(--white); border-color: var(--line); cursor: default; text-decoration: none; }
 .resource-secondary[aria-disabled="true"] { background: transparent; font-size: 11px; }
 .resources-note { color: var(--muted); font-size: calc(12px + 2pt); }
 @media (max-width: 900px) {
