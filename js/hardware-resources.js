@@ -9,7 +9,7 @@ const hardwareResources = {
   hardwareFigure: "assets/hardware.png",        // Existing joint diagram.
   systemFigure: "assets/System_Diagram.png",                            // Optional image; blank keeps the built-in diagram.
   bom: "assets/Phonebot_BOM.xlsx",              // Your existing spreadsheet.
-  cad: "",                                     // Example: "assets/hardware/PhoneBot.step"
+  cad: "https://oauth.onshape.com/documents/52250295df7249a5954f8767/w/1a6ebc56610a82f67cdb3db9/e/21fd0686a23f8dc3c04a2bcf?renderMode=0&uiState=6afa61bd66f0f027cf1a8644",                                     // Example: "assets/hardware/PhoneBot.step"
   stepFiles: "assets/PhoneBot_Assembly_STEP.zip",                               // Example: "assets/hardware/PhoneBot_STEP.zip" or a .step file.
   printableParts: "",                          // Example: "assets/hardware/PrintableParts.zip"
   assemblyTutorial: "",                        // Local video/PDF, e.g. "assets/videos/Assembly.mp4", or an HTTPS tutorial link.
@@ -62,6 +62,7 @@ if (hardwareResources.systemFigure.trim()) {
   const form = document.getElementById("download-license-form");
   const agree = document.getElementById("download-license-agree");
   const download = document.getElementById("download-license-continue");
+  const eyebrow = dialog.querySelector(".license-eyebrow");
   const resource = document.getElementById("download-license-resource");
   const note = document.querySelector(".hardware-resources .resources-note");
   if (!dialog || !form || !agree || !download || !note) return;
@@ -77,6 +78,9 @@ if (hardwareResources.systemFigure.trim()) {
       agree.checked = false;
       download.disabled = true;
       resource.textContent = link.closest(".resource-card").querySelector("h4").textContent;
+      const isCad = link.dataset.resource === "cad";
+      download.textContent = isCad ? "Access" : "Download";
+      eyebrow.textContent = isCad ? "Resource Access" : "Resource Download";
       dialog.showModal();
     });
   });

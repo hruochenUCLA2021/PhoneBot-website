@@ -1,13 +1,13 @@
 /* PHONEBOT 3D VIEWER
-   Optimized web model: assets/models/PhoneBot-preview.glb.
-   Original CAD export is preserved at assets/PhoneBot_Asm.glb.
+   Balanced web preview: assets/models/PhoneBot-preview.glb.
+   The full CAD export remains at assets/PhoneBot_Asm.glb.
    Direct-file previews use a generated, embedded model-data script.
    Export the full assembly with embedded materials/textures and no Draco,
    Meshopt, or KTX2 compression. STEP and STL files are downloads, not viewer inputs.
 */
 const cadViewerConfig = {
-  modelPath: "assets/models/PhoneBot-preview.glb?v=battery-yellow-1",
-  embeddedModelPath: "assets/models/PhoneBot-preview-data.js?v=battery-yellow-1",
+  modelPath: "assets/models/PhoneBot-preview.glb?v=20261115-balanced-yellow",
+  embeddedModelPath: "assets/models/PhoneBot-preview-data.js?v=20261115-balanced-yellow",
   cameraOrbit: "35deg 75deg 105%",
   orientation: "0deg 0deg 0deg"
 };
